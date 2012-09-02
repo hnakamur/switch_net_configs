@@ -1,0 +1,19 @@
+##
+# Host Database
+#
+# localhost is used to configure the loopback interface
+# when the system is booting.  Do not change this entry.
+##
+<% if @is_home %>
+127.0.0.1	localhost
+<% else %>
+127.0.0.1	localhost web1.example.com web2.example.com
+<% end %>
+255.255.255.255	broadcasthost
+::1             localhost 
+fe80::1%lo0	localhost
+
+<% if @is_home %>
+192.168.11.103 naruh.net
+192.168.11.219 web1.example.com web2.example.com
+<% end %>
